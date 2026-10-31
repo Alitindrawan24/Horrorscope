@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #020617; /* slate-950 */
+  color: #e2e8f0; /* slate-200 */
+  min-height: 100%;
+}
+
+body {
+  /* Subtle drifting fog backdrop so the page never feels flat-black. */
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.08), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(220, 38, 38, 0.06), transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Scrollbar themed to match the eerie palette. */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
